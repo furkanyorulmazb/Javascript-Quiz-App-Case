@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Quiz Container -->
+    <div id="quiz-container">
+        <h1>Javascript Quiz App</h1><br>
+        <h2>Furkan Yorulmaz</h2>
+        <div id="question-container">
+            <!-- 10 Saniyelik Bilgilendirme -->
+            <div class="timer-container">
+                <img src="hourglass.gif" width="30px" class="hidden">
+                <p id="selection-timer" class="hidden">10 saniye sonra seçim yapabilirsiniz...</p>
+            </div>
+
+            <!-- Soru -->
+            <p id="question-text"></p>
+            
+            <!-- Seçenekler -->
+            <div id="options-container">
+            </div>
+        </div>
+
+        <!-- Kalan süre ve soru sayacı yan yana -->
+        <div class="status-container">
+            <p id="timer">Kalan Süre: 30 sn</p>
+            <p id="question-progress" class="hidden">1/10</p> <!-- Kaçıncı soruda olduğunu gösterecek alan -->
+        </div>
+        
+        <!-- 30 sn sayaç -->
+        <div id="timer-container">
+            <p><b>Bilgilendirme:</b></p>
+            <ul>
+                <li>Bu quiz 10 sorudan oluşmaktadır.</li>
+                <li>10 saniye dolmadan soruya cevap verilememektedir.</li>
+                <li>30 saniye sonra otomatik olarak bir sonraki soruya geçer.</li>
+                <li>Önceki soruya geçiş yapılamamaktadır.</li>
+            </ul>
+        </div>      
+        
+        <div class="start-btn-div">
+            <button id="start-btn">Quize Başla</button>
+        </div>
+        
+        <!-- Sonuçlar tablosu -->
+        <table id="results-table" class="hidden">
+            <thead>
+                <tr>
+                    <th>Soru</th>
+                    <th>Cevabınız</th>
+                </tr>
+            </thead>
+            <tbody id="results-body">
+                <!-- Sonuçlar burada gösterilecek -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
